@@ -4,9 +4,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         GRAVE, 1,   2,   3,   4,   5,   ESC,
         TAB,   Q,   W,   E,   R,   T,   FN18,
         LCTL,  A,   S,   D,   F,   G,
-        LSFT,  Z,   X,   C,   V,   B,   NO,
+        LSFT,  Z,   X,   C,   V,   B,   TAB,
         SYSREQ,    NO,  NO,  LGUI,LALT,
-                                      NO,  FN0,
+                                    FN21,  FN0,
                                           HOME,
                                  BSPC,DEL, END,
         // right hand
@@ -15,7 +15,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   H,   J,   K,   L,   SCLN,RCTL,
              RBRC,N,   M,   COMM,DOT, SLSH,RSFT,
                        LEFT,UP,  DOWN,RGHT,BSLS,
-        RALT,INSERT,
+        FN0,INSERT,
         PGUP,
         PGDN,ENT, SPC
     ),
@@ -23,9 +23,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // layer 1 : function and symbol keys
         // left hand
         TRNS,F1,  F2,  F3,  F4,  F5,  F6,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,FN17,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       FN17,TRNS,
                                            TRNS,
@@ -43,23 +43,23 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layer 2 : keyboard functions
         // left hand
-        FN0, TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
+        GRAVE, 1,   2,   3,   4,   5,   ESC,
+        TAB,   Q,   W,   E,   R,   T,   FN18,
+        LCTL,  A,   S,   D,   F,   G,
+        LSFT,  Z,   X,   C,   V,   B,   TAB,
+        SYSREQ,    NO,  NO,  LGUI,LALT,
+                                    FN21,  FN0,
+                                          HOME,
+                                  SPC,DEL, END,
         // right hand
-             FN4, TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-                  TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-                       TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
+             FN17,6,   7,   8,   9,   0,   MINS,
+             LBRC,Y,   U,   I,   O,   P,   EQL,
+                  H,   J,   K,   L,   SCLN,RCTL,
+             RBRC,N,   M,   COMM,DOT, SLSH,RSFT,
+                       LEFT,UP,  DOWN,RGHT,BSLS,
+        RALT,INSERT,
+        PGUP,
+        PGDN,ENT, SPC
     ),
 
     KEYMAP(  // layer 3: numpad
@@ -128,7 +128,7 @@ static const uint16_t PROGMEM fn_actions[] = {
     [18] =  ACTION_LAYER_SET(1, ON_BOTH),                   // FN18 - set Layer1, to use Workman layout at firmware level
     [19] =  ACTION_LAYER_SET(2, ON_BOTH),                   // FN19 - set Layer2, to use with Numpad keys
 
-    [21] =  ACTION_FUNCTION_TAP(L_CTRL_ALT_ENT),            // FN21 - momentary Layer5+CTRL+ALT on Enter, to use with F* keys on top row
+    [21] =  ACTION_LAYER_SET(2, ON_BOTH),            // FN21 - momentary Layer5+CTRL+ALT on Enter, to use with F* keys on top row
     [22] =  ACTION_FUNCTION_TAP(R_CTRL_ALT_ENT),            // FN22 - momentary Layer6+CTRL+ALT on Enter, to use with F* keys on top row + utils
 
     [28] =  ACTION_LAYER_TAP_KEY(4, KC_A),                  // FN28 = momentary Layer4 on A key, to use with unconvenient keys
