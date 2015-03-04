@@ -1,37 +1,37 @@
 static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // layer 0 : default
         // left hand
-        GRAVE, 1,   2,   3,   4,   5,   ESC,
+        ESC,   1,   2,   3,   4,   5,   GRAVE,
         TAB,   Q,   W,   E,   R,   T,   FN18,
         LCTL,  A,   S,   D,   F,   G,
-        LSFT,  Z,   X,   C,   V,   B,   TAB,
-        SYSREQ,    NO,  NO,  LGUI,LALT,
-                                    FN21,  FN0,
-                                          HOME,
-                                 BSPC,DEL, END,
+        LSFT,  Z,   X,   C,   V,   B,   NO,
+        SYSREQ,NO,  NO,  LGUI,LALT,
+                                        NO,  NO,
+                                             HOME,
+                                   BSPC,DEL, END,
         // right hand
              QUOT,6,   7,   8,   9,   0,   MINS,
              LBRC,Y,   U,   I,   O,   P,   EQL,
                   H,   J,   K,   L,   SCLN,RCTL,
              RBRC,N,   M,   COMM,DOT, SLSH,RSFT,
                        LEFT,UP,  DOWN,RGHT,BSLS,
-        FN0,INSERT,
+        FN0, INSERT,
         PGUP,
         PGDN,ENT, SPC
     ),
 
-    KEYMAP(  // layer 1 : function and symbol keys
+    KEYMAP(  // layer 1 : function and numeric keypad
         // left hand
         TRNS,F1,  F2,  F3,  F4,  F5,  F6,
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,FN17,
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,FN19,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       FN17,TRNS,
                                            TRNS,
                                  TRNS,TRNS,TRNS,
         // right hand
-             F7, F8,  F9,  F10,  F11,  F12, TRNS,
+             F7,  F8,  F9,  F10, F11, F12, TRNS,
              TRNS,TRNS,7,   8,   9,   TRNS,TRNS,
                   TRNS,4,   5,   6,   TRNS,TRNS,
              MSEL,TRNS,1,   2,   3,   TRNS,TRNS,
@@ -41,25 +41,26 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         VOLD,MPRV,MNXT
     ),
 
-    KEYMAP(  // layer 2 : keyboard functions
+    KEYMAP(  // layer 2 : gaming mode
         // left hand
-        GRAVE, 1,   2,   3,   4,   5,   ESC,
-        TAB,   Q,   W,   E,   R,   T,   FN18,
-        LCTL,  A,   S,   D,   F,   G,
-        LSFT,  Z,   X,   C,   V,   B,   TAB,
-        SYSREQ,    NO,  NO,  LGUI,LALT,
-                                    FN21,  FN0,
-                                          HOME,
-                                  SPC,DEL, END,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,FN18,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,
+                                       DEL,TRNS,
+                                           TRNS,
+                                  SPC,BSPC,TRNS,
+
         // right hand
-             FN17,6,   7,   8,   9,   0,   MINS,
-             LBRC,Y,   U,   I,   O,   P,   EQL,
-                  H,   J,   K,   L,   SCLN,RCTL,
-             RBRC,N,   M,   COMM,DOT, SLSH,RSFT,
-                       LEFT,UP,  DOWN,RGHT,BSLS,
-        RALT,INSERT,
-        PGUP,
-        PGDN,ENT, SPC
+             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+                  TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+                       TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,
+        TRNS,
+        TRNS,TRNS,TRNS
     ),
 
     KEYMAP(  // layer 3: numpad
